@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "schema-diff"
+name = "schemadiffed"
 version = "0.1.0"
 description = "Compare Parquet file schemas across different filesystems"
 authors = ["Elsayed91 <elsayed.is@outlook.com>"]
