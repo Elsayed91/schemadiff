@@ -1,0 +1,9 @@
+.vscode
+schemadiff/__pycache__
+schemadiff/.pytest_cache
+tests/__pycache__
+parquet_files
+final2.py
+key.json
+Makefile
+report.json
