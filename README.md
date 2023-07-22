@@ -14,7 +14,7 @@ SchemaDiff addresses these issues by efficiently identifying the files with sche
 Install the package with pip:
 
 ```bash
-pip install schemadiff
+pip install schema-diff # schemadiff taken :p
 ```
 
 ## Usage
