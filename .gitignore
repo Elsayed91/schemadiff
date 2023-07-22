@@ -7,3 +7,4 @@ final2.py
 key.json
 Makefile
 report.json
+.mypy_cache

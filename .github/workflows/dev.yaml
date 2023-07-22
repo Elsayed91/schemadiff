@@ -1,0 +1,28 @@
+name: dev_cicd
+
+on:
+  push:
+    branches: [ dev ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install poetry
+      run: pipx install poetry
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        cache: 'poetry'
+    - run: 
+        poetry install --all-extras
+    - name: Lint with flake8
+      run: poetry run flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+    - name: Format with black
+      run: poetry run black --check .
+    - name: Check imports with isort
+      run: poetry run isort --check-only .
+    - name: Test with pytest
+      run: poetry run pytest tests/ -sv

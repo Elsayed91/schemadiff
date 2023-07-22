@@ -2,9 +2,14 @@
 name = "schemadiff"
 version = "0.1.0"
 description = "Compare Parquet file schemas across different filesystems"
-authors = ["Elsayed91 elsayed.is@outlook.com"]
+authors = ["Elsayed91 <elsayed.is@outlook.com>"]
+packages = [{include = "schemadiff"}]
 readme = "README.md"
 license = "MIT"
+
+[tool.poetry.scripts]
+schemadiff = "schemadiff.cli:main"
+
 
 [tool.poetry.dependencies]
 python = "3.10"
@@ -14,6 +19,7 @@ pyyaml = "^6.0.1"
 gcsfs = {version = "^2023.6.0", optional = true}
 s3fs = {version = "^2023.6.0", optional = true}
 fsspec = "^2023.6.0"
+
 
 
 [tool.poetry.extras]
@@ -26,6 +32,7 @@ pytest = "^7.4.0"
 flake8 = "^6.0.0"
 isort = "^5.12.0"
 black = "^23.7.0"
+pre-commit = "^3.3.3"
 
 [build-system]
 requires = ["poetry-core"]
