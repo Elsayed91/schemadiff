@@ -21,13 +21,13 @@ jobs:
     - run: 
         poetry install --all-extras
     - name: Lint with flake8
-      run: poetry run flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-    - name: Test with pytest
-      run: poetry run pytest
+      run: poetry run flake8 schemadiff/ --count --select=E9,F63,F7,F82 --show-source --statistics
     - name: Format with black
-      run: poetry run black --check .
+      run: poetry run black schemadiff/ --check
     - name: Check imports with isort
-      run: poetry run isort --check-only .
+      run: poetry run isort schemadiff/ --check-only
+    - name: Test with pytest
+      run: poetry run pytest tests/ -sv
     - name: Publish to PyPi
       run: |
         poetry publish --build -u __token__ -p ${{ secrets.PYPI_TOKEN }}
