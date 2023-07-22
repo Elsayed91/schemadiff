@@ -1097,7 +1097,10 @@ files = [
 ]
 
 [package.dependencies]
-numpy = {version = ">=1.21.0", markers = "python_version >= \"3.10\""}
+numpy = [
+    {version = ">=1.21.0", markers = "python_version >= \"3.10\""},
+    {version = ">=1.23.2", markers = "python_version >= \"3.11\""},
+]
 python-dateutil = ">=2.8.2"
 pytz = ">=2020.1"
 tzdata = ">=2022.1"
@@ -1747,5 +1750,5 @@ google = ["gcsfs"]
 
 [metadata]
 lock-version = "2.0"
-python-versions = "3.10"
-content-hash = "690b3f063ccfc68c3cdbbc1fbf517ea4c7569639e08c9f08b4b95de6d211ad51"
+python-versions = "^3.10"
+content-hash = "39657dffd87613f8d869ff23f4683e65a94c79b52cfaff06f7c02ef008a7a6c0"
