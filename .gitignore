@@ -8,3 +8,6 @@ key.json
 Makefile
 report.json
 .mypy_cache
+xd
+xd.py
+test_run_gcp.py

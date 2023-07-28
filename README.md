@@ -1,6 +1,6 @@
 # schemadiff
 
-schemadiff is a niche package designed for situations where a — large — number of files on a filesystem are expected to have identical schemas, but they don't. This can present a challenge when working with distributed computing systems like `Apache Spark` or `Google BigQuery`, as unexpected schema differences can disrupt data loading and processing.
+schemadiff is a package designed for niche situations where a – large – number of files on a filesystem are expected to have identical schemas, but they don't. This can present a challenge when working with distributed computing systems like `Apache Spark` or `Google BigQuery`, as unexpected schema differences can disrupt data loading and processing.
 
 Consider a scenario where you are processing thousands of files, and a subset of them have schemas that are almost identical but not completely matching. This can lead to errors such as:
 
